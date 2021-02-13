@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h4 class="mt-2 text-center">Search Image for create slider</h4>
+    <div class="form-inline mt-3 d-flex justify-content-center">
+      <div class="input-group col-md-6 mb-2">
+        <input type="text" class="form-control" id="search" placeholder="nature">
+      </div>
+      <button type="button" id="search-btn" class="btn btn-primary mb-2">Search</button>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div id="spinner" class="spinner-border text-info d-none" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+    
+    <section class="images">
+      <div class="justify-content-around align-items-center mt-3 gallery-header mb-2">
+        <h3 class="head-title text-center">Select image for create slider</h3>
+        <div class="input-group col-md-3 mb-2 mb-md-0">
+          <input class="form-control" id="duration" placeholder="slider change duration">
+        </div>
+        <button id="create-slider" class="btn btn-primary px-5">Create slider</button>
+      </div>
+      <div class="row gallery">
+
+      </div>
+    </section>
+    <!-- slider -->
+    <div class="main">
+      <section class="mt-5" id="sliders">
+
+      </section>
+      <div class="dots d-flex mt-2 w-100 justify-content-center align-items-center bg-light">
+        <span class="dot" onclick="changeItem(-1)"></span>
+        <span class="dot" onclick="changeItem(1)"></span>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-lg-3 col-md-4 col-xs-6 img-item mb-2">
+    <img class="img-fluid img-thumbnail" src="https://pixabay.com/get/g41fc2319be302499d207582ca1659bb4848a6b092b3a5a2d6e130a2d669497688cd69111fee4c140d5f07cdd1bf96e54_640.jpg" alt="tree, sunset, amazing">
+    <h5 style="width: 45%;" class="d-inline-flex justify-content-start ml-2"> <i class="fa fa-heart mt-1" aria-hidden="true"></i>  23</h5> 
+    <h5 style="width: 40%;" class="d-inline-flex justify-content-end ml-3"><i class="fa fa-eye mt-1" aria-hidden="true"></i>  3434</h5>
+
+  </div>
+  <div class="col-lg-3 col-md-4 col-xs-6 img-item mb-2">
+    <img class="img-fluid img-thumbnail" src="https://pixabay.com/get/g41fc2319be302499d207582ca1659bb4848a6b092b3a5a2d6e130a2d669497688cd69111fee4c140d5f07cdd1bf96e54_640.jpg" alt="tree, sunset, amazing">
+    <div class="image-body">
+      <p style="width: 45%;" class="d-inline-flex justify-content-start ml-2 body-text"> <i class="fa fa-user-circle mt-1" aria-hidden="true"></i>  ${image.user}</h5> 
+      <p style="width: 40%;" class="d-inline-flex justify-content-end ml-3"><i class="fa fa-eye mt-1" aria-hidden="true"></i>  ${image.views}</h5>
+    </div>
+
+  </div> -->
+  
+
+
+
+  <!-- Optional JavaScript -->
+  <script src="./app.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
