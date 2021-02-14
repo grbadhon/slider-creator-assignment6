@@ -144,7 +144,7 @@ sliderBtn.addEventListener('click', function () {
   createSlider()
 })
 
-
+// For spinner
 
 const loadSpinner = () => {
   const spinner = document.getElementById('spinner');
