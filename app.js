@@ -12,7 +12,6 @@ let sliders = [];
 // Find the name in the url and go to their website
 // to create your own api key
 const KEY = '15674931-a9d714b6e9d654524df198e00&q';
-const KEY2 = '20265639-552642b877fbb5f605c76148f';
 
 // show images 
 const showImages = (images) => {
@@ -31,11 +30,11 @@ const showImages = (images) => {
 
     gallery.appendChild(div)
   })
-  toggleSpinner();
+  loadSpinner();
 }
 
 const getImages = (query) => {
-  toggleSpinner();
+  loadSpinner();
   fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
     .then(response => response.json())
     .then(data => showImages(data.hits))
@@ -147,7 +146,7 @@ sliderBtn.addEventListener('click', function () {
 
 
 
-const toggleSpinner = () => {
+const loadSpinner = () => {
   const spinner = document.getElementById('spinner');
   spinner.classList.toggle('d-none');
 
