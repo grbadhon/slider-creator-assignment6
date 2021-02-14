@@ -28,7 +28,7 @@ const showImages = (images) => {
                       <div class="image-body">
                       <p style="width: 45%;" class="d-inline-flex justify-content-start ml-2"> <i class="fa fa-heart mt-1 likes" aria-hidden="true"></i>  ${image.likes}</p> 
                       <p style="width: 40%;" class="d-inline-flex justify-content-end ml-3"><i class="fa fa-eye mt-1 views" aria-hidden="true"></i>  ${image.views}</p></div>`;
-                      
+
     gallery.appendChild(div)
   })
   toggleSpinner();
@@ -46,12 +46,12 @@ let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
   element.classList.toggle('added');
- 
+
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
-  } 
- 
+  }
+
   else {
     sliders.splice(item, 1);
   }
@@ -77,32 +77,19 @@ const createSlider = () => {
   // hide image aria
   imagesArea.style.display = 'none';
   let duration = document.getElementById('duration').value;
-  if(duration < 0 || duration === ""){
+  if (duration < 0 || duration === "") {
     duration = 1000;
   }
-    sliders.forEach(slide => {
-      let item = document.createElement('div')
-      item.className = "slider-item";
-      item.innerHTML = `<img class="w-100"
+  sliders.forEach(slide => {
+    let item = document.createElement('div')
+    item.className = "slider-item";
+    item.innerHTML = `<img class="w-100"
       src="${slide}"
       alt="">`;
-      sliderContainer.appendChild(item)
-    })
-  
-  // else{
-  //   sliders.forEach(slide => {
-  //     let item = document.createElement('div')
-  //     item.className = "slider-item";
-  //     item.innerHTML = `<img class="w-100"
-  //     src="${slide}"
-  //     alt="">`;
-  //     sliderContainer.appendChild(item)
-  //   })
-    // alert("Minimum duration time should be 500");
-    // document.querySelector('.main').style.display = 'none';
-    // getImages(search.value)
-    // break;
-  // }
+    sliderContainer.appendChild(item)
+  })
+
+
 
   changeSlide(0)
   timer = setInterval(function () {
@@ -140,12 +127,12 @@ const changeSlide = (index) => {
 
 // For enter key
 let searchField = document.getElementById("search");
-searchField.addEventListener('keyup', function(event) { 
-  
-  if (event.key === 'Enter') { 
-      document.getElementById("search-btn").click(); 
-  } 
-}); 
+searchField.addEventListener('keyup', function (event) {
+
+  if (event.key === 'Enter') {
+    document.getElementById("search-btn").click();
+  }
+});
 searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
@@ -163,7 +150,7 @@ sliderBtn.addEventListener('click', function () {
 const toggleSpinner = () => {
   const spinner = document.getElementById('spinner');
   spinner.classList.toggle('d-none');
- 
+
 }
 
 
